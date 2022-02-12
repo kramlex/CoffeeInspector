@@ -1,0 +1,9 @@
+platform :ios, '14.1'
+
+target 'iosApp' do
+  use_frameworks!
+  
+  pod 'MultiPlatformLibrary', :path => '../shared'
+  pod 'MultiPlatformLibrarySwift', :path => '../shared'
+  pod 'KMPNativeCoroutinesCombine'
+end

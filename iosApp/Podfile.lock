@@ -1,0 +1,33 @@
+PODS:
+  - KMPNativeCoroutinesCombine (0.6.0):
+    - KMPNativeCoroutinesCore
+  - KMPNativeCoroutinesCore (0.11.2)
+  - MultiPlatformLibrary (0.1.0)
+  - MultiPlatformLibrarySwift (1.0):
+    - MultiPlatformLibrary
+
+DEPENDENCIES:
+  - KMPNativeCoroutinesCombine
+  - MultiPlatformLibrary (from `../shared`)
+  - MultiPlatformLibrarySwift (from `../shared`)
+
+SPEC REPOS:
+  trunk:
+    - KMPNativeCoroutinesCombine
+    - KMPNativeCoroutinesCore
+
+EXTERNAL SOURCES:
+  MultiPlatformLibrary:
+    :path: "../shared"
+  MultiPlatformLibrarySwift:
+    :path: "../shared"
+
+SPEC CHECKSUMS:
+  KMPNativeCoroutinesCombine: af5ce48fc2f42374c8497475ed49063d7433a790
+  KMPNativeCoroutinesCore: 1bf310946b5285e109be492d0f6177ffd808eb34
+  MultiPlatformLibrary: 532b2d1148eb2b3a25dd8a14629133219170bda8
+  MultiPlatformLibrarySwift: 751be4be788e3516c9c9c3d85c295ccdf920ddd4
+
+PODFILE CHECKSUM: a54342613943c35521da2b464f9fe1d3a6b145cc
+
+COCOAPODS: 1.11.2

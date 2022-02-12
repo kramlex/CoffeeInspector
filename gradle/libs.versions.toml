@@ -1,0 +1,70 @@
+[versions]
+# kotlin
+kotlinVersion = "1.6.10"
+
+# kotlinx
+kotlinxSerializationVersion = "1.3.2"
+kotlinxDateTimeVersion = "0.3.2"
+coroutinesVersion = "1.6.0-native-mt"
+
+# ktor
+ktorClientVersion = "1.6.7"
+
+# moko
+kswiftVersion = "0.3.0"
+mokoUtilsVersion = "0.2.0"
+mokoResourcesVersion = "0.18.0"
+
+#database
+sqlDelightVersion = "1.5.3"
+
+## UUID generator
+generatorUUIDVersion = "0.3.1"
+
+# multiplatform
+multiplatformSettingsVersion = "0.8.1"
+
+# **** GRADLE PLUGINS VERSIONS ****
+androidToolsGradleVersion = "7.0.1"
+
+[libraries]
+# kotlin
+kotlinTestJUnit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlinVersion" }
+
+# kotlinx
+kotlinSerialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationVersion" }
+kotlinxDateTime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDateTimeVersion" }
+coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutinesVersion" }
+
+# ktor
+ktorClient = { module = "io.ktor:ktor-client-core", version.ref = "ktorClientVersion" }
+ktorClientLogging = { module = "io.ktor:ktor-client-logging", version.ref = "ktorClientVersion" }
+ktorClientOkHttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktorClientVersion" }
+ktorClientMock = { module = "io.ktor:ktor-client-mock", version.ref = "ktorClientVersion" }
+
+# database
+sqlDelightDriverAndroid = { module = "com.squareup.sqldelight:android-driver", version.ref = "sqlDelightVersion"}
+sqlDelightDriverNative = { module = "com.squareup.sqldelight:native-driver", version.ref = "sqlDelightVersion"}
+sqlDelightDriverJvm = { module = "com.squareup.sqldelight:sqlite-driver", version.ref = "sqlDelightVersion"}
+sqlDelightCoroutinesExt = {module = "com.squareup.sqldelight:coroutines-extensions", version.ref = "sqlDelightVersion"}
+
+# moko
+mokoResources = { module = "dev.icerock.moko:resources", version.ref = "mokoResourcesVersion" }
+mokoUtils = { module = "dev.icerock.moko:utils", version.ref = "mokoUtilsVersion" }
+
+# UUID Generator
+generatorUUID = { module = "com.benasher44:uuid", version.ref = "generatorUUIDVersion"}
+
+# multiplatform
+multiplatformSettings = { module = "com.russhwolf:multiplatform-settings", version.ref = "multiplatformSettingsVersion" }
+multiplatformSettingsCoroutine = { module = "com.russhwolf:multiplatform-settings-coroutines-native-mt", version.ref = "multiplatformSettingsVersion" }
+multiplatformSettingsSerialization = { module = "com.russhwolf:multiplatform-settings-serialization", version.ref = "multiplatformSettingsVersion" }
+multiplatformSettingsTest = { module = "com.russhwolf:multiplatform-settings-test", version.ref = "multiplatformSettingsVersion" }
+
+
+# **** GRADLE ****
+
+mokoResourcesGeneratorGradle = { module = "dev.icerock.moko:resources-generator", version.ref = "mokoResourcesVersion" }
+sqlDelightGradle = { module = "com.squareup.sqldelight:gradle-plugin", version.ref = "sqlDelightVersion"}
+kswiftGradle = { module = "dev.icerock.moko:kswift-gradle-plugin" , version.ref = "kswiftVersion"}
+kotlinSerializationGradle = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlinVersion" }
