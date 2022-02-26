@@ -14,6 +14,7 @@ buildscript {
         classpath(libs.kswiftGradle)
         classpath(libs.sqlDelightGradle)
         classpath(":build-logic")
+        classpath("com.android.tools.build:gradle:7.1.0")
     }
 }
 

@@ -11,7 +11,8 @@ plugins {
 val iosDeploymentTarget = "14.1"
 
 val mppModules = listOf(
-    projects.shared.features.profile
+    projects.shared.features.profile,
+    projects.shared.entity
 )
 
 val kSwiftModules = mppModules + listOf(
@@ -43,6 +44,14 @@ dependencies {
     commonMainApi(libs.multiplatformSettingsCoroutine)
     commonMainApi(libs.multiplatformSettingsSerialization)
 
+    commonMainImplementation(libs.sqlDelightCoroutinesExt)
+
+    // iosMain
+    iosMainImplementation(libs.sqlDelightDriverNative)
+
+    // androidMain
+    androidMainImplementation(libs.sqlDelightDriverAndroid)
+
 
     mppModules.forEach { commonMainApi(it) }
 }
@@ -51,4 +60,12 @@ framework {
     mppModules.forEach { export(it) }
     export(libs.multiplatformSettingsCoroutine)
     export(libs.multiplatformSettings)
+}
+
+sqldelight {
+    database("CoffeeInspectorDatabase") {
+        packageName = "ru.kramlex.coffeeinspector.db.generated"
+        sourceFolders = listOf("sqldelight")
+        version = 1
+    }
 }

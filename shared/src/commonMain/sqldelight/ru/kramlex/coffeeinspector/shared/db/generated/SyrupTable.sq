@@ -1,0 +1,17 @@
+CREATE TABLE SyrupTable(
+    id INTEGER AS Int PRIMARY KEY,
+    name TEXT NOT NULL
+);
+
+getAllSyrup:
+SELECT *
+FROM SyrupTable;
+
+getSyrupById:
+SELECT *
+FROM SyrupTable
+WHERE id = :id;
+
+addSyrup:
+INSERT INTO SyrupTable(name)
+VALUES (:name);

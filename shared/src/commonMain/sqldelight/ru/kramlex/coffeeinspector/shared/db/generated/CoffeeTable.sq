@@ -1,0 +1,36 @@
+import kotlin.collections.List;
+import kotlinx.datetime.LocalDateTime;
+
+CREATE TABLE CoffeeTable(
+    id INTEGER AS Int PRIMARY KEY,
+    name TEXT,
+    description TEXT,
+    amount INTEGER NOT NULL,
+    createdAt TEXT AS LocalDateTime NOT NULL,
+    rating INTEGER AS Int,
+    userId INTEGER AS Int NOT NULL,
+    syrups TEXT AS List<Int>
+);
+
+addCoffee:
+INSERT INTO CoffeeTable(amount, createdAt, userId)
+VALUES (:amount, :createdAt, :userId);
+
+addCoffeeWithName:
+INSERT INTO CoffeeTable(name, amount, createdAt, userId)
+VALUES (:name, :amount, :createdAt, :userId);
+
+setCoffeeRatingById:
+UPDATE CoffeeTable
+SET rating = :newRating
+WHERE id = :id;
+
+setCoffeeSyrupById:
+UPDATE CoffeeTable
+SET syrups = :syrups
+WHERE id = :id;
+
+getCoffeeByUserId:
+SELECT *
+FROM CoffeeTable
+WHERE userId = :userId;

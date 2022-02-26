@@ -1,0 +1,29 @@
+import kotlinx.datetime.LocalDateTime;
+
+CREATE TABLE UserTable (
+    id INTEGER AS Int PRIMARY KEY,
+    name TEXT NOT NULL,
+    createdAt TEXT AS LocalDateTime NOT NULL
+);
+
+addUser:
+INSERT INTO UserTable(name,createdAt)
+VALUES (?, ?);
+
+
+updateUserNameById:
+UPDATE UserTable
+SET name = :name
+WHERE id = :id;
+
+getAllUsers:
+SELECT *
+FROM UserTable;
+
+getUserById:
+SELECT *
+FROM UserTable
+WHERE id = :id;
+
+drop:
+DELETE FROM UserTable;

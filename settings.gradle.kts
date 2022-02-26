@@ -12,13 +12,16 @@ dependencyResolutionManagement {
 
 val modules = listOf(
     // android
-    ":androidApp",
+//    ":androidApp",
 
     // shared
     ":shared",
 
     // features
     ":shared:features:profile",
+
+    // entity
+    ":shared:entity"
 )
 
 rootProject.name = "CoffeeInspector"

@@ -5,7 +5,6 @@ plugins {
     id("dev.icerock.mobile.multiplatform.android-manifest")
 }
 
-
 kotlin {
     android()
     ios()
